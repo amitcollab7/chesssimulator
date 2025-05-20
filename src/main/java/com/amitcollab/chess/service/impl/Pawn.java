@@ -2,11 +2,11 @@ package com.amitcollab.chess.service.impl;
 
 import com.amitcollab.chess.model.Directions;
 import com.amitcollab.chess.service.ChessPiece;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Service
+@Component
 public class Pawn extends ChessPiece {
     @Override
     public List<Directions> getAllowedDirections() {

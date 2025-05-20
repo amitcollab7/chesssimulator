@@ -12,7 +12,12 @@ public record Position(int row, char col) {
     }
 
 
-    public boolean isValid(int row, char col){
+    public boolean isValid(){
         return (row>=1 && row<=8) && (col>='A' && col<='H');
+    }
+
+    @Override
+    public String toString(){
+        return "" + (char) col + row;
     }
 }

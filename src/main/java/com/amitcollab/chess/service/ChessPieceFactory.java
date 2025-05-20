@@ -21,7 +21,7 @@ public class ChessPieceFactory {
         if(chessPieceMap.containsKey(name)){
             return chessPieceMap.get(name);
         } else {
-            throw new IllegalArgumentException(name+"is not valid chess piece.");
+            throw new IllegalArgumentException(name+" is not valid chess piece.");
         }
     }
 }
