@@ -13,8 +13,13 @@ public class MoveGenerator {
 
     public static List<String> generate(Position startPos, ChessPiece piece) {
         List<String> moves = new ArrayList<>();
+
+        if(!startPos.isValid())
+            return moves;
+        //loop with the direction
         for (Directions dir : piece.getAllowedDirections()) {
             Position nextPos = startPos;
+            //move until valid
             for (int i = 0; i < piece.getMaxSteps(); i++) {
                 nextPos = dir.move(nextPos);
                 if (!nextPos.isValid())

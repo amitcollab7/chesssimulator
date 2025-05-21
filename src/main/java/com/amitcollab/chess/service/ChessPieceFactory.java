@@ -14,6 +14,7 @@ public class ChessPieceFactory {
 
     @Autowired
     public ChessPieceFactory(List<ChessPiece> chessPieces){
+        //loading the objects to factory map
         chessPieces.forEach(chessPiece ->chessPieceMap.put( chessPiece.name(), chessPiece));
     }
 
